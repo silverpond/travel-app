@@ -2,3 +2,12 @@ log/
 tmp/
 *.swp
 *~
+log/
+coverage/
+tmp/
+*.tmproj
+model.svg
+*.swf
+.project
+.actionScriptProperties
+
