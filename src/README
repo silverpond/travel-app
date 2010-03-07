@@ -1,1 +1,15 @@
-Here is where all code goes
+This folder contains all code.
+
+Subfolders should be sorted by language or framework, primarily, if there's
+more than one.
+
+For example,
+
+  src/
+    flex/
+    rails/
+
+(Which is pretty common in our projects.)
+
+Obviously this is unnecessary if the project is all in one language, but how
+often is life that simple?

@@ -10,4 +10,5 @@ model.svg
 *.swf
 .project
 .actionScriptProperties
-
+.sass_cache/
+.DS_STORE/
