@@ -1,6 +1,6 @@
-This is is VPO Project.
+This is Silverpond repository
 
-The structure is outlined below. Information taken from http://sites.google.com/a/silverpond.com.au/software-engineering/git-repositories
+The structure is outlined below.
 
 -------------------------------------------------------------------------
 A Project's Digital Repository
@@ -8,8 +8,7 @@ A Project's Digital Repository
 Directory Structure:
 
 src/        - all source related to project
-    vpo/    - Rails application
-    flex/   - Flex application
+    rails/    - Rails application
 
 doc/        - documentation
 
