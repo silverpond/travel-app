@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+system "rake db:drop db:create db:migrate db:seed"
+
+# Only kirill needs to regenerate data regulary
+if ARGV != []
+  system "ruby db/import.rb" 
+  system 'rake dump'
+end
