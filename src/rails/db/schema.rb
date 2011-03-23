@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110323043148) do
+ActiveRecord::Schema.define(:version => 20110323053254) do
 
   create_table "airports", :force => true do |t|
     t.string   "code"
@@ -19,6 +19,14 @@ ActiveRecord::Schema.define(:version => 20110323043148) do
     t.string   "country"
     t.string   "latitude"
     t.string   "longitude"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "currencies", :force => true do |t|
+    t.string   "name"
+    t.string   "code"
+    t.string   "country"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
