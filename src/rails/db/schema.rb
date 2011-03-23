@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(:version => 20110323043148) do
     t.string   "name"
     t.string   "city"
     t.string   "country"
+    t.string   "latitude"
+    t.string   "longitude"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
