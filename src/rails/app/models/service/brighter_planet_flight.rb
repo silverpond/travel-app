@@ -12,8 +12,12 @@ class Service::BrigherPlanetFlight
 
     @source_json = JSON.parse(brighter_planet.read)
     
-    @emission = @source_json["emission"]
+    @emission = @source_json["emission"].to_f
     @emission_units = @source_json["emission_units"]
   end
 
+  def to_s
+    emission = "%.3f" % @emission 
+    "#{emission} #{@emision_units}"
+  end
 end
