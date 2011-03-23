@@ -6,7 +6,7 @@ class TravelFlowTest < ActionDispatch::IntegrationTest
 
   test 'getting to homepage' do
     visit '/'
-    assert page.has_content? 'Travel All'
+    assert page.has_content? 'Travel App'
   end
 
   test 'submit from and to airports and see next page with more info' do
