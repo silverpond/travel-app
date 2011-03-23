@@ -1,13 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  code: MyString
-  name: MyString
-  city: MyString
-  country: MyString
+  code: KIX
+  name: Kansai International Airport
+  city: OSAKA
+  country: JAPAN
 
 two:
-  code: MyString
-  name: MyString
-  city: MyString
-  country: MyString
+  code: MEL
+  name: Tullamarine International Airport
+  city: MELBOURNE
+  country: AUSTRALIA
