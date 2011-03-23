@@ -20,7 +20,7 @@ describe Service::BrigherPlanetFlight do
     end
     
     it "should have to string" do
-      @service.to_s = "7042.156 kilograms"
+      @service.to_s.should == "7042.156 kilograms"
     end
 
   end

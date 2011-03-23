@@ -18,6 +18,6 @@ class Service::BrigherPlanetFlight
 
   def to_s
     emission = "%.3f" % @emission 
-    "#{emission} #{@emision_units}"
+    "#{emission} #{@emission_units}"
   end
 end
