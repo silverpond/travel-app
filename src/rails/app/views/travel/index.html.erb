@@ -1,1 +1,9 @@
 <h1>Travel App</h1>
+
+<%= semantic_form_for :travel, :url => '/travel' do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :from %>
+    <%= f.input :to %>
+  <% end %>
+  <%= f.submit 'Fly' %>
+<% end %>

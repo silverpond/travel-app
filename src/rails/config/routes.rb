@@ -1,6 +1,7 @@
 TravelApp::Application.routes.draw do
 
   root :to => "travel#index"
+  match '/travel' => 'travel#travel'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

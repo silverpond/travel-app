@@ -13,7 +13,7 @@ class TravelFlowTest < ActionDispatch::IntegrationTest
     visit '/'
     fill_in 'From', :with => 'MEL'
     fill_in 'To', :with => 'KIX'
-    click_button_or_line 'Fly'
+    click_button 'Fly'
     assert page.has_content? 'Kansai International Airport'
     assert page.has_content? 'Tullamarine International Airport'
   end

@@ -48,6 +48,10 @@ GEM
       abstract (>= 1.0.0)
     ffi (0.6.3)
       rake (>= 0.8.7)
+    formtastic (1.2.3)
+      actionpack (>= 2.3.7)
+      activesupport (>= 2.3.7)
+      i18n (~> 0.4)
     i18n (0.5.0)
     json_pure (1.5.1)
     launchy (0.3.7)
@@ -99,6 +103,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  formtastic
   launchy
   mysql2
   rails (= 3.0.5)
