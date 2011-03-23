@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'json'
 require 'open-uri'
 
-describe Service do
+describe Service::BrigherPlanetFlight do
   context "Carbon Footprint" do
     it "should connect to carbon.brighterplanet.com and return flight data" do
 
@@ -10,12 +10,12 @@ describe Service do
       brighter_planet = open(url)
       test_carbon_data = JSON.parse(brighter_planet.read)
 
-      source_carbon_data = Service.brighter_planet_flight_carbon_footprint_for('MEL', 'LAX')
+      service = Service::BrigherPlanetFlight.new('MEL', 'LAX')
 
-      source_carbon_data["emission"].should_not be_nil
-      source_carbon_data["emission"].should eq(test_carbon_data["emission"])
-      source_carbon_data["emission_units"].should_not be_nil
-      source_carbon_data["emission_units"].should eq(test_carbon_data["emission_units"])
+      service.emission.should_not be_nil
+      service.emission.should eq(test_carbon_data["emission"])
+      service.emission_units.should_not be_nil
+      service.emission_units.should eq(test_carbon_data["emission_units"])
 
     end
   end
