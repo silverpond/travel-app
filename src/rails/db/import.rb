@@ -1,3 +1,4 @@
+require 'csv'
 require_relative '../config/environment'
 
 def import_airports
@@ -28,6 +29,29 @@ def import_airports
   end
 end
 
+
+def import_currencies
+  airports_text = IO.read('db/imports/dl_iso_table_a1.csv')
+
+  CSV.foreach 'db/imports/dl_iso_table_a1.csv' do |row|
+    country,currency_name,currency_code,numeric_code,minor_unit = row
+
+    currency = Currency.new
+    currency.name = currency_name
+    currency.code = currency_code
+    currency.country = country
+
+    currency.save!
+
+  end
+end
+
+
+
 Airport.transaction do
   import_airports
+end
+
+Currency.transaction do
+  import_currencies
 end
