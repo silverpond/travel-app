@@ -34,4 +34,8 @@ gem 'formtastic'
 group :test do
   gem "capybara"
   gem "launchy"
+
+  gem "rspec"
+  gem "rspec-rails", "~> 2.4"
+  gem "autotest"
 end
