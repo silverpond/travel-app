@@ -18,7 +18,8 @@ describe Service::WorldWeatherOnline do
     @service.current_condition_temp_celcius.should_not be_nil
     @service.current_condition_desription.should_not be_nil
     @service.current_condition_observed_at.should_not be_nil
-
+    
+    @service.weather_days.count.should == 5
   end
 
 end
