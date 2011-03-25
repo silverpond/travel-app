@@ -1,2 +1,9 @@
 From <%= @from_airport.name %>
+
+<%= image_tag "http://maps.google.com/maps/api/staticmap?center=#{@from_airport.latitude},#{@from_airport.longitude}&zoom=12&size=256x256&maptype=roadmap&sensor=false" %>
+
+<br/>
+
 To <%= @to_airport.name %>
+
+<%= image_tag "http://maps.google.com/maps/api/staticmap?center=#{@to_airport.latitude},#{@to_airport.longitude}&zoom=12&size=256x256&maptype=roadmap&sensor=false" %>
