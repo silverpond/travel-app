@@ -13,6 +13,9 @@ class TravelController < ApplicationController
     @from_currency = @from_airport.currency
     @exchange = @from_currency.convert_to @to_airport.currency
 
+    geo_name_service = Service::GeoNamesTimezone.new @to_airport.latitude,@to_airport.longitude
+    @local_time_at_destination = geo_name_service.current_date_time
+
   end
 
 end
