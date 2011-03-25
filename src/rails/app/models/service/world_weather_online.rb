@@ -1,4 +1,5 @@
 class Service::WorldWeatherOnline
+  require 'open-uri'
   KEY = "c1b49d1767235416112203" 
 
   attr_accessor :current_condition_icon_url,
