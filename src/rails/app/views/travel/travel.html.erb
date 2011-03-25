@@ -1,9 +1,36 @@
-From <%= @from_airport.name %>
+<script type="text/javascript"
+    src="http://maps.google.com/maps/api/js?sensor=false">
+</script>
+<script type="text/javascript">
+  function initialize_maps(selector_id, airport_name, lat,longt) {
+    var latlng = new google.maps.LatLng(lat,longt);
+    var myOptions = {
+      zoom: 12,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById(selector_id),
+        myOptions);
+    var marker = new google.maps.Marker({
+        position: latlng,
+        map: map,
+        animation: google.maps.Animation.DROP,
+        title: airport_name
+  });   
+  }
 
-<%= image_tag "http://maps.google.com/maps/api/staticmap?center=#{@from_airport.latitude},#{@from_airport.longitude}&zoom=12&size=256x256&maptype=roadmap&sensor=false" %>
+  $(function(){
+    initialize_maps('from_airport_map','<%= @from_airport.name %>' , <%= @from_airport.latitude %>, <%= @from_airport.longitude %>);
+    initialize_maps('to_airport_map','<%= @to_airport.name %>' , <%= @to_airport.latitude %>, <%= @to_airport.longitude %>);
+  })
+
+</script>
+
+
+From <%= @from_airport.name %>
+<div id="from_airport_map" style="width:256px; height:256px;"></div>
 
 <br/>
 
 To <%= @to_airport.name %>
-
-<%= image_tag "http://maps.google.com/maps/api/staticmap?center=#{@to_airport.latitude},#{@to_airport.longitude}&zoom=12&size=256x256&maptype=roadmap&sensor=false" %>
+<div id="to_airport_map" style="width:256px; height:256px;"></div>
