@@ -13,9 +13,12 @@ class Airport < ActiveRecord::Base
         conditions = conditions | { :city.matches => "%#{term}%" }
         conditions = conditions | { :country.matches => "%#{term}%" }
       end
-
-
     end
     where(conditions)
   end
+  
+  def currency
+    Currency.where(:country => self.country ).first
+  end
+  
 end

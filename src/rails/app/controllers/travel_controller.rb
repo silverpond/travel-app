@@ -10,6 +10,9 @@ class TravelController < ApplicationController
     weather_service = Service::WorldWeatherOnline.new @to_airport.latitude,@to_airport.longitude, 5
     @weather_days = weather_service.weather_days
 
+    @from_currency = @from_airport.currency
+    @exchange = @from_currency.convert_to @to_airport.currency
+
   end
 
 end
