@@ -23,6 +23,11 @@ ActiveRecord::Schema.define(:version => 20110323053254) do
     t.datetime "updated_at"
   end
 
+  add_index "airports", ["city"], :name => "index_airports_on_city"
+  add_index "airports", ["code"], :name => "index_airports_on_code"
+  add_index "airports", ["country"], :name => "index_airports_on_country"
+  add_index "airports", ["name"], :name => "index_airports_on_name"
+
   create_table "currencies", :force => true do |t|
     t.string   "name"
     t.string   "code"

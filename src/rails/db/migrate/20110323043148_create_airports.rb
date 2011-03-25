@@ -10,6 +10,10 @@ class CreateAirports < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :airports, :code
+    add_index :airports, :name
+    add_index :airports, :city
+    add_index :airports, :country
   end
 
   def self.down
