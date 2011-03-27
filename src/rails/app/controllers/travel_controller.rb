@@ -16,6 +16,7 @@ class TravelController < ApplicationController
     geo_name_service = Service::GeoNamesTimezone.new @to_airport.latitude,@to_airport.longitude
     @local_time_at_destination = geo_name_service.current_date_time
 
+    @brighter_planet_service = Service::BrighterPlanetFlight.new(@from_airport.code, @to_airport.code)
   end
 
 end
