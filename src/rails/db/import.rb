@@ -1,7 +1,7 @@
 require 'csv'
 require_relative '../config/environment'
 
-def import_airports
+def import_global_airports_database
   airports_text = IO.read('db/imports/GlobalAirportDatabase.txt')
 
   airports_text.lines.each do |line|
@@ -27,6 +27,7 @@ def import_airports
     airport.save!
 
   end
+
 end
 
 
@@ -40,7 +41,8 @@ def import_currencies
     currency.name = currency_name
     currency.code = currency_code
     currency.country = country
-
+    
+    puts currency.inspect
     currency.save!
 
   end
@@ -49,9 +51,17 @@ end
 
 
 Airport.transaction do
-  import_airports
+  puts "importing airports..."
+  import_global_airports_database
+
+  #cleanup data to be the same as currency
+  sql = ActiveRecord::Base.connection
+  sql.execute "UPDATE airports 
+               SET country = 'USA' 
+               WHERE country = 'UNITED STATES'"
 end
 
 Currency.transaction do
+  puts "importing currencies..."
   import_currencies
 end
