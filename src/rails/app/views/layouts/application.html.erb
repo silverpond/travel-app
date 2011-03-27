@@ -11,8 +11,14 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+<div id="main">
+  <div id="top">
+    <h1>Travel App</h1>
+    <h4>Travel App aims to provide you with information about your travel destination</h4>
+  </div>
+</div>
+<div id="content">
+  <%= yield %>
+</div>
 </body>
 </html>

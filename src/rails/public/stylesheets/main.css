@@ -183,9 +183,18 @@ a:link, a:visited, a:active {
 	width:112px;
 }
 .day h4{ line-height:39px; height:39px; text-align:center; color:#fff; 	text-shadow:1px 1px #13447f; font-size:14px; text-align:center; width:112px; font-weight:normal; background:#5b96dd url(../images/titlebg1.gif) repeat-x;}
-.day .pic{height:36px; text-align:center; padding-top:80px; font-size:19px; color:#cccccc; border-left:1px solid #ececec;}
+.day .pic {
+    height:25px; 
+    text-align:center; 
+    padding-top:110px; 
+    font-size:19px; 
+    color:#cccccc; 
+    border-left:1px 
+    solid #ececec;
+}
 .last{border-right:1px solid #ececec; width:111px;}
-.day .pic span{color:#333333;}
+
+.day .pic span { color:#333333; }
 .day h5{line-height:29px; height:29px; background:#f6f6f5; text-align:center; color:#548fd9;}
 .tomorrow h4 { background:url(../images/titlbg2.gif) repeat-x;}
 .tomorrow h5 {background:#eceded;}

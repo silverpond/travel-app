@@ -1,12 +1,4 @@
 <script type="text/javascript" src="/javascripts/airport_autocomplete.js" language="javascript" charset="utf-8"></script>
-
-<div id="main">
-  <div id="top">
-    <h1>Travel App</h1>
-    <h4>Travel App aims to provide you with information about your travel destination</h4>
-  </div>
-</div>
-<div id="content">
   <%= form_tag('travel') do %>
     <div class="form">
       <%= text_field(:travel, :from, :value => 'Leaving from: eg., MEL',
@@ -21,6 +13,4 @@
     </div>
     <%= submit_tag("Fly", :class => 'submit') %>
   <% end %>
-</div>
-
 
