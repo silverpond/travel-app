@@ -1,4 +1,6 @@
 class Airport < ActiveRecord::Base
+  validates_presence_of :country
+
   def self.search q
     conditions = {}
     for term in q.split ' '
@@ -18,7 +20,7 @@ class Airport < ActiveRecord::Base
   end
   
   def currency
-    Currency.where(:country => self.country ).first
+    Currency.where(:country => self.country).first
   end
   
 end
