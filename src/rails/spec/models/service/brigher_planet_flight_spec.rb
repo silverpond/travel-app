@@ -2,10 +2,10 @@ require 'spec_helper'
 require 'json'
 require 'open-uri'
 
-describe Service::BrigherPlanetFlight do
+describe Service::BrighterPlanetFlight do
   context "Carbon Footprint" do
     before(:each) do
-      @service = Service::BrigherPlanetFlight.new('MEL', 'LAX')
+      @service = Service::BrighterPlanetFlight.new('MEL', 'LAX')
     end
 
     it "should connect to carbon.brighterplanet.com and return flight data" do
