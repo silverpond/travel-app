@@ -7,7 +7,7 @@ class Service::GeoNamesTimezone
                 :timezone_id
 
   def initialize lat, lng
-    url = "http://api.geonames.org/timezoneJSON?formatted=true&lat=#{lat}&lng=#{lng}&username=demo&style=full"
+    url = "http://api.geonames.org/timezoneJSON?formatted=true&lat=#{lat}&lng=#{lng}&username=silverpond&style=full"
     geo_names_uri = open(url)
     @source_data = JSON.parse(geo_names_uri.read)
     
