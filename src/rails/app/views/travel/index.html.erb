@@ -1,11 +1,26 @@
 <script type="text/javascript" src="/javascripts/airport_autocomplete.js" language="javascript" charset="utf-8"></script>
 
-<h1>Travel App</h1>
-
-<%= semantic_form_for :travel, :url => '/travel' do |f| %>
-  <%= f.inputs do %>
-    <%= f.input :from %>
-    <%= f.input :to %>
+<div id="main">
+  <div id="top">
+    <h1>Travel App</h1>
+    <h4>Travel App aims to provide you with information about your travel destination</h4>
+  </div>
+</div>
+<div id="content">
+  <%= form_tag('travel') do %>
+    <div class="form">
+      <%= text_field(:travel, :from, :value => 'Leaving from: eg., MEL',
+                     :onfocus => "this.value='';", 
+                     :onblur =>"this.value = !this.value ? 'Leaving from: eg., MEL' : this.value;") %>
+    </div>
+    <div class="form">
+      <%= text_field(:travel, :to, :value => 'Travelling to: eg., LAX', 
+                     :onclick => "this.value='';",
+                     :onfocus => "this.select()",
+                     :onblur => "this.value = !this.value ? 'Travelling to: eg., LAX' : this.value;") %>
+    </div>
+    <%= submit_tag("Fly", :class => 'submit') %>
   <% end %>
-  <%= f.submit 'Fly' %>
-<% end %>
+</div>
+
+

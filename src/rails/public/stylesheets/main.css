@@ -1,0 +1,195 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin:0;
+	padding:0;
+}
+html {
+	width:100%;
+	height: 100%;
+}
+body {
+	background: url(../images/1_01.gif) repeat-x;
+	background-color:#fff;
+	font-family: Arial, Tahoma, Verdana, Helvetica, sans-serif;
+	color:#000000;
+	font-size:12px;
+	padding:0;
+	margin:0;
+}
+input, textarea {
+	font-family:Arial, Helvetica, sans-serif;
+}
+img {
+	border:0;
+}
+a {
+	color:#8ca100;
+}
+ul, li {
+	list-style:none;
+}
+br.clear {
+	clear:both;
+}
+a:focus, input:focus, textarea:focus {
+	outline: none;
+}
+a:link, a:visited, a:active {
+	text-decoration:none;
+}
+#top {
+	background:url(../images/head.gif) no-repeat;
+	width:600px;
+	margin:auto;
+	margin-top:69px;
+	height:98px;
+	color:#fff;
+	text-shadow:1px 1px #13447f;
+}
+#top h1 {
+	padding:25px 0 0 22px;
+	font-family: 'Oswald', arial, serif;
+	font-weight:normal;
+}
+#top h4 {
+	padding:5px 0 0 22px;
+	font-size:14px;
+	font-weight:normal;
+}
+#content {
+	width:600px;
+	margin:auto;
+	background:url(../images/mainbg.gif) repeat-x;
+}
+#content form {
+	padding-top:30px;
+	width:374px;
+	margin:auto;
+}
+#content form div.form {
+	margin-bottom:18px;
+	padding:5px;
+	background:#e0e0e0;
+	border-bottom:1px solid #c4c4c4;
+	border-right:1px solid #c4c4c4;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+}
+#content form div input {
+	width:352px;
+	height:28px;
+	line-height:28px;
+	border:1px solid #c4c4c4;
+	border-right:none;
+	border-bottom:none;
+	font-size:19px;
+	color:#666666;
+	padding-left:10px;
+}
+.submit {
+	background:url(../images/submitbg.gif) repeat-x;
+	font-size:15px;
+	text-transform:uppercase;
+	text-align:center;
+	border:none;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	height:38px;
+	line-height:38px;
+	width:122px;
+	color:#fff;
+	text-shadow:1px 1px #13447f;
+	-moz-box-shadow: 3px 3px 0px #ecedee;
+	-webkit-box-shadow: 3px 3px 0px #ecedee;
+	box-shadow: 3px 3px 0px #ecedee;
+	float:right;
+}
+.city {
+	width:560px;
+	margin:auto;
+}
+.city div {
+	float:left;
+	margin-top:12px;
+}
+.city .info {
+	width:217px;
+	padding-right:20px;
+	position:relative;
+	height:220px;
+}
+.city .info h3 {
+	color:#accdef;
+	font-size:19px;
+	font-weight:normal;
+}
+.city .info h2 {
+	color:#5696d9;
+	font-size:27px;
+	font-weight:normal;
+}
+.city .info h2 span {
+	color:#1f5793;
+}
+.city .info .data {
+	position:absolute;
+	bottom:0;
+	width:217px;
+	left:0;
+	float:none;
+	margin:auto;
+}
+.city .info .data div {
+	border-top: 1px solid #eaeaea;
+	text-align:right;
+	margin:auto;
+	color:#5696d9;
+	padding:0 10px;
+	height:28px;
+	width:197px;
+	line-height:28px;
+	float:left;
+}
+.city .info .data div.grey {
+	background:#f4f4f4;
+}
+.city .info .data div span {
+	float:left;
+	color:#1f5793;
+}
+.city .map {
+	padding:5px;
+	width:312px;
+	background:#eff6ff;
+	border-bottom:1px solid #c4c4c4;
+	border-right:1px solid #c4c4c4;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+}
+#weather {
+	width:560px;
+	margin:auto;
+	margin-top:20px;
+}
+.day {
+	float:left;
+	width:112px;
+}
+.day h4{ line-height:39px; height:39px; text-align:center; color:#fff; 	text-shadow:1px 1px #13447f; font-size:14px; text-align:center; width:112px; font-weight:normal; background:#5b96dd url(../images/titlebg1.gif) repeat-x;}
+.day .pic{height:36px; text-align:center; padding-top:80px; font-size:19px; color:#cccccc; border-left:1px solid #ececec;}
+.last{border-right:1px solid #ececec; width:111px;}
+.day .pic span{color:#333333;}
+.day h5{line-height:29px; height:29px; background:#f6f6f5; text-align:center; color:#548fd9;}
+.tomorrow h4 { background:url(../images/titlbg2.gif) repeat-x;}
+.tomorrow h5 {background:#eceded;}
+.sunny{background:url(../images/sun.gif) no-repeat center;}
+.rain{ background:url(../images/storm.gif) no-repeat center;}
+.snow{ background:url(../images/snow.gif) no-repeat center;}
+.cloud{ background:url(../images/cloud.gif) no-repeat center;}
