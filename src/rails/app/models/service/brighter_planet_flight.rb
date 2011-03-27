@@ -1,4 +1,4 @@
-class Service::BrigherPlanetFlight
+class Service::BrighterPlanetFlight
   BRIGHTER_PLANET_KEY = "8ac3f57be86f0fb305cde54c30d97ce3"
  
   @source_json = nil
