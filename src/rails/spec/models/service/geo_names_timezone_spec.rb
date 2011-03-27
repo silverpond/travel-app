@@ -10,7 +10,7 @@ describe Service::GeoNamesTimezone do
   end
   
   it "should connect to geo names timezone service" do
-    url = "http://api.geonames.org/timezoneJSON?formatted=true&lat=45.01&lng=10.2&username=demo&style=full"
+    url = "http://api.geonames.org/timezoneJSON?formatted=true&lat=45.01&lng=10.2&username=silverpond&style=full"
     geo_names = open(url)
     test_timezone_data = JSON.parse(geo_names.read)
 
