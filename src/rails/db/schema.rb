@@ -19,6 +19,9 @@ ActiveRecord::Schema.define(:version => 20110323053254) do
     t.string   "country"
     t.string   "latitude"
     t.string   "longitude"
+    t.string   "altitude"
+    t.string   "timezone"
+    t.string   "daylight_savings_zone"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
