@@ -128,13 +128,20 @@ a:link, a:visited, a:active {
 	font-size:19px;
 	font-weight:normal;
 }
+div#weather div.info h3 {
+	color:#5696d9;
+	font-size:19px;
+	font-weight:normal;
+}
 .city .info h2 {
 	color:#5696d9;
-	font-size:27px;
+	font-size:19px;
 	font-weight:normal;
 }
 .city .info h2 span {
 	color:#1f5793;
+  font-size:27px;
+  font-weight:bold;
 }
 .city .info .data {
 	position:absolute;
@@ -181,6 +188,7 @@ a:link, a:visited, a:active {
 .day {
 	float:left;
 	width:112px;
+  padding-bottom: 30px;
 }
 .day h4{ line-height:39px; height:39px; text-align:center; color:#fff; 	text-shadow:1px 1px #13447f; font-size:14px; text-align:center; width:112px; font-weight:normal; background:#5b96dd url(../images/titlebg1.gif) repeat-x;}
 .day .pic {
