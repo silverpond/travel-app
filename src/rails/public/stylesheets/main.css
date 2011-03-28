@@ -109,6 +109,9 @@ a:link, a:visited, a:active {
 	box-shadow: 3px 3px 0px #ecedee;
 	float:right;
 }
+.submit:hover {
+  background:url(../images/submitbg2.gif) repeat-x;
+}
 .city {
 	width:560px;
 	margin:auto;
