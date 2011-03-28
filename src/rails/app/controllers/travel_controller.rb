@@ -1,11 +1,13 @@
 class TravelController < ApplicationController
 
   def index
+    params[:travel] ||= {}
   end
 
   def travel
     @from_airport = Airport.where(:code => params[:travel][:from]).first
     @to_airport = Airport.where(:code => params[:travel][:to]).first
+
 
     #consider refactoring to Travel class
     flash[:error] = []
