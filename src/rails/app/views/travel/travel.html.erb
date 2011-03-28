@@ -1,3 +1,4 @@
+<% content_for :head do %>
 <script type="text/javascript"
     src="http://maps.google.com/maps/api/js?sensor=false">
 </script>
@@ -5,9 +6,15 @@
   function initialize_maps(selector_id, airport_name, lat,longt) {
     var latlng = new google.maps.LatLng(lat,longt);
     var myOptions = {
-      zoom: 12,
+      zoom: 2,
       center: latlng,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      panControl: false,
+      zoomControl: true,
+      mapTypeControl: false,
+      scaleControl: false,
+      streetViewControl: false,
+      overviewMapControl: false
     };
     var map = new google.maps.Map(document.getElementById(selector_id),
         myOptions);
@@ -25,6 +32,7 @@
   })
 
 </script>
+<% end %>
 
   <div class="city">
     <div class="info">
@@ -35,7 +43,7 @@
       </h2>
     </div>
     <div class="map">
-      <div id="from_airport_map" style="width:300px; height:256px;"></div>
+      <div id="from_airport_map" style="width:312px; height:256px;"></div>
     </div>
   </div>
   <br class="clear"/>
@@ -64,7 +72,7 @@
       </div>
     </div>
     <div class="map">
-      <div id="to_airport_map" style="width:300px; height:256px;"></div>
+      <div id="to_airport_map" style="width:312px; height:256px;"></div>
     </div>
   </div>
   
