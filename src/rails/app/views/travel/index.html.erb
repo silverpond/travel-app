@@ -1,7 +1,7 @@
 <script type="text/javascript" src="/javascripts/airport_autocomplete.js" language="javascript" charset="utf-8"></script>
 
   <p style="text-align: center; padding-top: 15px; padding-bottom: 0px; font-size: 14px;">
-    <%= raw flash[:error].join "<br />" %>
+    <%= raw (flash[:error] || []).join "<br />" %>
   </p>
 
   <%= form_tag('travel') do %>
