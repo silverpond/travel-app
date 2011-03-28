@@ -5,9 +5,11 @@ one:
   name: Kansai International Airport
   city: OSAKA
   country: JAPAN
+  latitude: 34.434167
+  longitude: 135.232778
 
 two:
   code: MEL
-  name: Tullamarine International Airport
+  name: MELBOURNE International Airport
   city: MELBOURNE
   country: AUSTRALIA

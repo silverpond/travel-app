@@ -1,11 +1,11 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  code: MyString
-  country: MyString
+  name: Australian Dollar
+  code: AUD
+  country: AUSTRALIA
 
 two:
-  name: MyString
-  code: MyString
-  country: MyString
+  name: Japanese Yen
+  code: JPY
+  country: JAPAN
