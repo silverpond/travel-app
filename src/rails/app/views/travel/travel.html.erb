@@ -11,6 +11,10 @@
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       panControl: false,
       zoomControl: true,
+      zoomControlOptions: {
+        style: google.maps.ZoomControlStyle.SMALL
+      },
+
       mapTypeControl: false,
       scaleControl: false,
       streetViewControl: false,
@@ -32,7 +36,40 @@
   })
 
 </script>
+
+<style type="text/css">
+#bg-map {
+  position:absolute;
+  left:-200px;
+  top:0px;
+  width:100%;
+  height:425px;
+  z-index:-20;
+  background:url(http://maps.google.com/maps/api/staticmap?zoom=1&size=640x640&sensor=false&style=feature:all|element:all|visibility:off&style=feature:water|element:geometry|visibility:on|lightness:100&style=feature:landscape|element:geometry|visibility:on|hue:0x0000ff&path=color:0xff000020|weight:5|<%= @from_airport.latitude %>,<%= @from_airport.longitude %>|<%= @to_airport.latitude %>,<%= @to_airport.longitude %>) no-repeat 0px -110px;
+  /* border-left: 1px #ddd dashed; */
+}
+
+/*
+#bg-map-fader {
+  position:absolute;
+  left:-200px;
+  top:0px;
+  width:100%;
+  height:425px;
+  z-index:-10;
+  background:url(/images/left-fader.png) repeat-y;
+}
+*/
+
+#content {
+  position: relative;
+}
+
+</style>
+
 <% end %>
+  <div id="bg-map"></div>
+  <!-- <div id="bg-map-fader"></div> -->
 
   <div class="city">
     <div class="info">
@@ -92,4 +129,5 @@
       <h5><%= day[:description] %></h5>
     </div>
   <% end %>
+  </div>
 

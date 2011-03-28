@@ -60,7 +60,7 @@ a:link, a:visited, a:active {
 #content {
 	width:600px;
 	margin:auto;
-	background:url(../images/mainbg.gif) repeat-x;
+	/* background:url(../images/mainbg.gif) repeat-x; */
 }
 #content form {
 	padding-top:30px;
