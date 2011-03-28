@@ -43,7 +43,7 @@ a:link, a:visited, a:active {
 	width:600px;
 	margin:auto;
 	margin-top:69px;
-	height:98px;
+	height:96px;
 	color:#fff;
 	text-shadow:1px 1px #13447f;
 }
@@ -179,6 +179,9 @@ div#weather div.info h3 {
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
 	-khtml-border-radius: 4px;
+}
+.city .map div {
+margin:0;
 }
 #weather {
 	width:560px;
