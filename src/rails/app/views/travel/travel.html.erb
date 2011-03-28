@@ -72,7 +72,7 @@
   
   <div id="weather">
     <div class="info">
-      <h3>Weather in Port Moresby</h3>
+      <h3>Weather in <%= @to_airport.city.split(/(\W)/).map(&:capitalize).join %></h3>
     </div>
   <% for day in @weather_days %>
     <div class="day">
