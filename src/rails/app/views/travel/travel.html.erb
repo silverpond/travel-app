@@ -83,7 +83,7 @@
             <%= @exchange.currency %>
         </div>
         <div class="grey">
-          <span>Time Zone:</span> 
+          <span><%= @to_airport.city.titleize %> Time :</span> 
           <%= l @local_time_at_destination, :format => :short %>
         </div>
         <div>
@@ -102,7 +102,7 @@
     </div>
   <% for day in @weather_days %>
     <div class="day">
-      <h4><%= day[:date] %></h4>
+      <h4><%= Date.parse(day[:date]) == Date.today ? 'Today' : day[:date] %></h4>
       <div class="pic" style="background: url('<%= day[:icon_url] %>') no-repeat center;">
       <%= day[:temp_min_celcius] %> &deg;
       <span><%= day[:temp_max_celcius] %> &deg;</span>

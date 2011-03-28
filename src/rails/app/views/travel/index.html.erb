@@ -1,12 +1,17 @@
 <script type="text/javascript" src="/javascripts/airport_autocomplete.js" language="javascript" charset="utf-8"></script>
+
+  <p style="text-align: center; padding-top: 15px; padding-bottom: 0px; font-size: 14px;">
+    <%= raw flash[:error].join "<br />" %>
+  </p>
+
   <%= form_tag('travel') do %>
     <div class="form">
-      <%= text_field(:travel, :from, :value => 'Leaving from: eg., MEL',
+      <%= text_field(:travel, :from, :value => params[:travel][:from] ? params[:travel][:from] : 'Leaving from: eg., MEL',
                      :onfocus => "this.value='';", 
                      :onblur =>"this.value = !this.value ? 'Leaving from: eg., MEL' : this.value;") %>
     </div>
     <div class="form">
-      <%= text_field(:travel, :to, :value => 'Travelling to: eg., LAX', 
+      <%= text_field(:travel, :to, :value => params[:travel][:to] ? params[:travel][:to] : 'Travelling to: eg., LAX', 
                      :onclick => "this.value='';",
                      :onfocus => "this.select()",
                      :onblur => "this.value = !this.value ? 'Travelling to: eg., LAX' : this.value;") %>
