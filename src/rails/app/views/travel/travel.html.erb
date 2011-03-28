@@ -1,3 +1,4 @@
+<% content_for :head do %>
 <script type="text/javascript"
     src="http://maps.google.com/maps/api/js?sensor=false">
 </script>
@@ -5,9 +6,19 @@
   function initialize_maps(selector_id, airport_name, lat,longt) {
     var latlng = new google.maps.LatLng(lat,longt);
     var myOptions = {
-      zoom: 12,
+      zoom: 2,
       center: latlng,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      panControl: false,
+      zoomControl: true,
+      zoomControlOptions: {
+        style: google.maps.ZoomControlStyle.SMALL
+      },
+
+      mapTypeControl: false,
+      scaleControl: false,
+      streetViewControl: false,
+      overviewMapControl: false
     };
     var map = new google.maps.Map(document.getElementById(selector_id),
         myOptions);
@@ -20,11 +31,32 @@
   }
 
   $(function(){
-    initialize_maps('from_airport_map','<%= @from_airport.name %>' , <%= @from_airport.latitude %>, <%= @from_airport.longitude %>);
+    //initialize_maps('from_airport_map','<%= @from_airport.name %>' , <%= @from_airport.latitude %>, <%= @from_airport.longitude %>);
     initialize_maps('to_airport_map','<%= @to_airport.name %>' , <%= @to_airport.latitude %>, <%= @to_airport.longitude %>);
   })
 
 </script>
+
+<style type="text/css">
+#bg-map {
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:100%;
+  height:470px;
+  z-index:-1;
+  background:url(http://maps.google.com/maps/api/staticmap?zoom=1&size=640x640&sensor=false&style=feature:all|element:all|visibility:off&style=feature:water|element:geometry|visibility:on|lightness:100&style=feature:landscape|element:geometry|visibility:on|hue:0x0000ff&path=color:0xff000020|weight:5|<%=latlng_interp(@from_airport, @to_airport, 10)%>) no-repeat 0px -110px;
+}
+
+#content {
+  position: relative;
+	background: none;
+}
+</style>
+
+<% end %>
+  <div id="bg-map"></div>
+  <!-- <div id="bg-map-fader"></div> -->
 
   <div class="city">
     <div class="info">
@@ -33,9 +65,6 @@
         <span><%= @from_airport.code %></span><br /> 
         <%= @from_airport.name %>
       </h2>
-    </div>
-    <div class="map">
-      <div id="from_airport_map" style="width:300px; height:256px;"></div>
     </div>
   </div>
   <br class="clear"/>
@@ -59,12 +88,9 @@
         </div>
         <div>
           <span>Carbon Footprint:</span>
-          <%= @brighter_planet_service.to_s %> 
+          <%= @brighter_planet_service.emission.to_i %> kg 
         </div>
       </div>
-    </div>
-    <div class="map">
-      <div id="to_airport_map" style="width:300px; height:256px;"></div>
     </div>
   </div>
   
@@ -84,4 +110,12 @@
       <h5><%= day[:description] %></h5>
     </div>
   <% end %>
+  </div>
 
+<!--  <div class="map">-->
+<!--    <div id="to_airport_map" style="width:312px; height:256px;"></div>-->
+<!--  </div>-->
+
+<!--  <div class="map">-->
+<!--    <div id="from_airport_map" style="width:312px; height:256px;"></div>-->
+<!--  </div>-->
