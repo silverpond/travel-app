@@ -60,7 +60,7 @@ a:link, a:visited, a:active {
 #content {
 	width:600px;
 	margin:auto;
-	/* background:url(../images/mainbg.gif) repeat-x; */
+	background:url(../images/mainbg.gif) repeat-x;
 }
 #content form {
 	padding-top:30px;
@@ -161,6 +161,7 @@ div#weather div.info h3 {
 	width:197px;
 	line-height:28px;
 	float:left;
+	background:white;
 }
 .city .info .data div.grey {
 	background:#f4f4f4;
@@ -169,7 +170,8 @@ div#weather div.info h3 {
 	float:left;
 	color:#1f5793;
 }
-.city .map {
+.map {
+	float: left;
 	padding:5px;
 	width:312px;
 	background:#eff6ff;
@@ -180,7 +182,7 @@ div#weather div.info h3 {
 	-webkit-border-radius: 4px;
 	-khtml-border-radius: 4px;
 }
-.city .map div {
+.map div {
 margin:0;
 }
 #weather {

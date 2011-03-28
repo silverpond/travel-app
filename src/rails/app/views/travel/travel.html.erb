@@ -31,7 +31,7 @@
   }
 
   $(function(){
-    initialize_maps('from_airport_map','<%= @from_airport.name %>' , <%= @from_airport.latitude %>, <%= @from_airport.longitude %>);
+    //initialize_maps('from_airport_map','<%= @from_airport.name %>' , <%= @from_airport.latitude %>, <%= @from_airport.longitude %>);
     initialize_maps('to_airport_map','<%= @to_airport.name %>' , <%= @to_airport.latitude %>, <%= @to_airport.longitude %>);
   })
 
@@ -40,31 +40,18 @@
 <style type="text/css">
 #bg-map {
   position:absolute;
-  left:-200px;
+  left:0px;
   top:0px;
   width:100%;
-  height:425px;
-  z-index:-20;
-  background:url(http://maps.google.com/maps/api/staticmap?zoom=1&size=640x640&sensor=false&style=feature:all|element:all|visibility:off&style=feature:water|element:geometry|visibility:on|lightness:100&style=feature:landscape|element:geometry|visibility:on|hue:0x0000ff&path=color:0xff000020|weight:5|<%= @from_airport.latitude %>,<%= @from_airport.longitude %>|<%= @to_airport.latitude %>,<%= @to_airport.longitude %>) no-repeat 0px -110px;
-  /* border-left: 1px #ddd dashed; */
+  height:470px;
+  z-index:-1;
+  background:url(http://maps.google.com/maps/api/staticmap?zoom=1&size=640x640&sensor=false&style=feature:all|element:all|visibility:off&style=feature:water|element:geometry|visibility:on|lightness:100&style=feature:landscape|element:geometry|visibility:on|hue:0x0000ff&path=color:0xff000020|weight:5|<%=latlng_interp(@from_airport, @to_airport, 10)%>) no-repeat 0px -110px;
 }
-
-/*
-#bg-map-fader {
-  position:absolute;
-  left:-200px;
-  top:0px;
-  width:100%;
-  height:425px;
-  z-index:-10;
-  background:url(/images/left-fader.png) repeat-y;
-}
-*/
 
 #content {
   position: relative;
+	background: none;
 }
-
 </style>
 
 <% end %>
@@ -78,9 +65,6 @@
         <span><%= @from_airport.code %></span><br /> 
         <%= @from_airport.name %>
       </h2>
-    </div>
-    <div class="map">
-      <div id="from_airport_map" style="width:312px; height:256px;"></div>
     </div>
   </div>
   <br class="clear"/>
@@ -104,12 +88,9 @@
         </div>
         <div>
           <span>Carbon Footprint:</span>
-          <%= @brighter_planet_service.to_s %> 
+          <%= @brighter_planet_service.emission.to_i %> kg 
         </div>
       </div>
-    </div>
-    <div class="map">
-      <div id="to_airport_map" style="width:312px; height:256px;"></div>
     </div>
   </div>
   
@@ -131,3 +112,10 @@
   <% end %>
   </div>
 
+<!--  <div class="map">-->
+<!--    <div id="to_airport_map" style="width:312px; height:256px;"></div>-->
+<!--  </div>-->
+
+<!--  <div class="map">-->
+<!--    <div id="from_airport_map" style="width:312px; height:256px;"></div>-->
+<!--  </div>-->
