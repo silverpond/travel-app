@@ -27,3 +27,14 @@ Airport.blueprint(:LAX) do
   longitude { "-118.408075" }
 end
 
+Currency.blueprint(:AUD) do
+  name { "Australian Dollar" }
+  code { "AUD" }
+  country { "AUSTRALIA" }
+end
+
+Currency.blueprint(:USD) do
+  name { "US Dollar" }
+  code { "USD" }
+  country { "UNITED STATES" }
+end
